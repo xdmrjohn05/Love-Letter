@@ -81,7 +81,6 @@ function PhotoTile({ photo, index }: { photo: Photo; index: number }) {
 // the component will try `.jpg`, `.png`, then `.svg` automatically.
 const photos: Photo[] = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
-  src: `/photos/photo-${i + 1}`,
   alt: `Photo ${i + 1}`,
   placeholder: `Photo ${i + 1}`,
   // allow GIF specifically for the 8th photo (index 7)
