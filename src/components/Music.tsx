@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Music({
   // Default to the placeholder MP3 in `public/audio/placeholder.mp3` so replacing
   // that file in your repo will be picked up automatically.
-  src = "/audio/placeholder.mp3",
+  src = `${import.meta.env.BASE_URL}audio/placeholder.mp3`,
   title = "Sweet - Cigarettes After Sex",
   caption = "This song makes me thing of you",
 }: {

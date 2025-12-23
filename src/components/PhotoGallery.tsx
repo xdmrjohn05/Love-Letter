@@ -18,7 +18,7 @@ function PhotoTile({ photo, index }: { photo: Photo; index: number }) {
 
   const isDataUrl = typeof photo.src === "string" && photo.src.startsWith("data:");
   const hasExtension = isDataUrl || (photo.src && /\.[a-zA-Z0-9]+$/.test(photo.src));
-  const base = photo.src ?? `/photos/photo-${photo.id}`;
+  const base = photo.src ?? `${import.meta.env.BASE_URL}photos/photo-${photo.id}`;
 
   const extList = hasExtension
     ? []
